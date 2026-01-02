@@ -6,9 +6,6 @@ import {
   useNavigation,
 } from "react-router";
 import { useState, useCallback } from "react";
-const DISCOUNT_TITLE = "Tier Discount Auto";
-const NAMESPACE = "discount_config";
-const KEY = "tier_settings";
 
 const DEFAULT_CONFIG = {
   groups: [
@@ -247,8 +244,8 @@ export const action = async ({ request }) => {
           discountClasses: ["PRODUCT"],
           metafields: [
             {
-              namespace: NAMESPACE,
-              key: KEY,
+              namespace: "discount_config",
+              key: "tier_settings",
               type: "json",
               value: JSON.stringify({ groups, excludedVariantIds }),
             },
