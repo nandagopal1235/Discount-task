@@ -6,6 +6,7 @@ import {
   useNavigation,
 } from "react-router";
 import { useState, useCallback } from "react";
+const NAMESPACE = "discount_config";
 
 const DEFAULT_CONFIG = {
   groups: [
