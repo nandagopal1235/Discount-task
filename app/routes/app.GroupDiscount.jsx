@@ -6,7 +6,9 @@ import {
   useNavigation,
 } from "react-router";
 import { useState, useCallback } from "react";
+const DISCOUNT_TITLE = "Tier Discount Auto";
 const NAMESPACE = "discount_config";
+const KEY = "tier_settings";
 
 const DEFAULT_CONFIG = {
   groups: [
