@@ -1,0 +1,32 @@
+query CartInput {
+  cart {
+    buyerIdentity {
+      customer {
+        id
+        metafield(namespace: "custom", key: "customer_tier") {
+          value
+        }
+      }
+    }
+    lines {
+      id
+      cost {
+        subtotalAmount {
+          amount
+        }
+      }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+        }
+      }
+    }
+  }
+  discount {
+    discountClasses
+    metafield(namespace: "discount_config", key: "tier_settings") {
+      value
+    }
+  }
+}
